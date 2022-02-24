@@ -46,7 +46,7 @@ You need to have the following tools installed on your machine: [Git](https://gi
 $ git clone <https://github.com/bortolettojoaog/web_design.git>
 
 # Access the project folder through terminal/cmd
-$ cd file_editor
+$ cd web_design
 
 # Open the project in visual studio code
 $ code .
