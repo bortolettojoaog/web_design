@@ -58,10 +58,10 @@ $ code .
 
 # ✔️ Tests:
 <h1 align="center">
-    <img alt="Test" title="Test" src="./github/tests1.gif" />
-    <img alt="Test" title="Test" src="./github/tests2.gif" />
-    <img alt="Test" title="Test" src="./github/tests3.gif" />
-    <img alt="Test" title="Test" src="./github/tests4.gif" />
+    <img alt="Test" title="Test" src="./github/tests1.jpg" />
+    <img alt="Test" title="Test" src="./github/tests2.jpg" />
+    <img alt="Test" title="Test" src="./github/tests3.jpg" />
+    <img alt="Test" title="Test" src="./github/tests4.jpg" />
 </h1>
 
 <br/>
