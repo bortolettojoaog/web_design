@@ -33,7 +33,7 @@
 
 	<body>
 
-        <header>
+        <header id="home">
             <div class="hamburguer">
                 <div class="line" id="line1"></div>
                 <div class="line" id="line2"></div>
@@ -42,7 +42,7 @@
             </div>
 
             <div class="img-wrapper">
-                <img src="assets/images/bg.jpg" alt="" />
+                <img src="assets/images/bg.jpg" alt="Imagem banner principal do site" />
             </div><!--img-wrapper-->
 
             <div class="container">
@@ -57,18 +57,130 @@
         <section class="lateral-menu">
             <nav>
                 <ul class="menu">
-                    <li class="menu-item"><a href="" class="menu-link">Home</a></li>
-                    <li class="menu-item"><a href="" class="menu-link">About</a></li>
-                    <li class="menu-item"><a href="" class="menu-link">Contact</a></li>
+                    <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
+                    <li class="menu-item"><a href="#about" class="menu-link">About</a></li>
+                    <li class="menu-item"><a href="#contact" class="menu-link">Contact</a></li>
                 </ul><!--ul-->
             </nav><!--menu-->
 
             <div class="social-media">
-                <a href=""><i class="fab fa-facebook-square" aria-hidden="true"></i></a>
-                <a href=""><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                <a href=""><i class="fab fa-github-square" aria-hidden="true"></i></a>
+                <a target="_blank" href="https://www.facebook.com/bortoletto.joaog/"><i class="fab fa-facebook-square" aria-hidden="true"></i></a>
+                <a target="_blank" href="https://www.instagram.com/bortoletto.joaog/"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                <a target="_blank" href="https://github.com/bortolettojoaog/"><i class="fab fa-github-square" aria-hidden="true"></i></a>
             </div><!--social-media-->
         </section><!--lateral-menu-->
+
+        <section class="section-projects">
+            <div class="top">
+                <h1>Projects</h1>
+            </div><!--top-->
+
+            <div class="projects">
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="assets/images/project1.jpg" alt="" />
+                    </div><!--card-img-wrapper-->
+
+                    <div class="card-info">
+                        <h2>Project #01</h2>
+                        <h3>HTML</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed interdum nibh.</p>
+                        <button>Learn More</button>
+                    </div><!--card-info-->
+                </div><!--card-->
+
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="assets/images/project2.jpg" alt="" />
+                    </div><!--card-img-wrapper-->
+
+                    <div class="card-info">
+                        <h2>Project #02</h2>
+                        <h3>JavaScript</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed interdum nibh.</p>
+                        <button>Learn More</button>
+                    </div><!--card-info-->
+                </div><!--card-->
+
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="assets/images/project3.jpg" alt="" />
+                    </div><!--card-img-wrapper-->
+
+                    <div class="card-info">
+                        <h2>Project #03</h2>
+                        <h3>CSS</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed interdum nibh.</p>
+                        <button>Learn More</button>
+                    </div><!--card-info-->
+                </div><!--card-->
+            </div><!--projects-->
+        </section><!--section-projects-->
+
+        <section class="section-contact" id="contact">
+            <div class="contact-wrapper">
+                <div class="contact-left">
+
+                </div><!--contact-left-->
+
+                <div class="contact-right">
+                    <h1>Contact Us</h1>
+
+                    <form>
+                        <div class="input-group">
+                            <input class="field" type="text" id="name" name="name" />
+                            <label for="name" class="field-label">Name:</label>
+                        </div><!--input-group-->
+
+                        <div class="input-group">
+                            <input class="field" type="text" id="email" name="email" />
+                            <label for="email" class="field-label">E-mail:</label>
+                        </div><!--input-group-->
+
+                        <div class="input-group">
+                            <textarea class="field" id="message" name="message"></textarea>
+                            <label for="message" class="field-label">Message:</label>
+                        </div><!--input-group-->
+
+                        <button class="btn submit" type="submit">Send</button>
+                    </form><!--form-->
+                </div><!--contact-right-->
+            </div><!--contact-wrapper-->
+        </section><!--section-contact-->
+
+        <section class="section-about" id="about">
+            <div class="top">
+                <h1>About</h1>
+            </div><!--top-->
+
+            <div class="about-content">
+                <div class="about-left">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget lorem mauris. Mauris suscipit malesuada nisl, porta iaculis nisi ultrices sed. Aliquam sollicitudin dui ac nisl consectetur, quis imperdiet ex ultricies. Etiam nec consectetur velit. Morbi eleifend erat finibus lacus tristique placerat. Nam ipsum mi, vulputate ut lorem sed, iaculis mattis libero. Donec vel diam sit amet felis sollicitudin blandit.</p>
+                </div><!--about-left-->
+    
+                <div class="about-right">
+                    
+                </div><!--about-right-->
+            </div><!--about-content-->
+        </section><!--section-about-->
+
+        <footer>
+            <div class="footer-content">
+                <p>Copyright &copy; 2021, JGB - All rights reserved.</p>
+
+                <div class="social-list">
+                    <ul>
+                        <li><a target="_blank" href="https://www.facebook.com/bortoletto.joaog/"><i class="fab fa-facebook-square" aria-hidden="true"></i></a></li>
+                        <li><a target="_blank" href="https://www.instagram.com/bortoletto.joaog/"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a target="_blank" href="https://github.com/bortolettojoaog/"><i class="fab fa-github-square" aria-hidden="true"></i></a></li>
+                    </ul><!--ul-->
+                </div><!--social-list-->
+            </div><!--footer-content-->
+        </footer>
+
+        <a href="#home" id="link-top">
+            <i class="fa fa-arrow-up"></i>
+        </a><!--link-top-->
 
 		<!--Externos-->
         <script src="js/script.js"></script>

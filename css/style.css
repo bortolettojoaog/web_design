@@ -16,6 +16,8 @@ html, body { height: 100%; }
 
 body { background-color: white; font-size: 16px; }
 
+html { scroll-behavior: smooth; }
+
 /* -Final Reset Padrão Navegador- */
 
 
@@ -55,6 +57,7 @@ header {
 }
 
 .hamburguer.show-menu {
+    transition: all 1.5s;
     right: 16rem;
 }
 
@@ -63,7 +66,7 @@ header {
     height: .1rem;
     background-color: white;
     box-shadow: 0.1rem 0.1rem 1px rgba(0, 0, 0, 0.8);
-    transition: transform 1.5s;
+    transition: transform 1.0s;
 }
 
 .show-menu #line1 {
@@ -123,29 +126,10 @@ header {
     animation: zoom 7s;
 }
 
-@keyframes zoom {
-    0% {
-        transform: scale(1.3);
-    }
-    100% {
-        transform: scale(1.0);
-    }
-}
-
 .text-banner {
     position: absolute;
     top: 30%;
     left: 15%;
-}
-
-@keyframes moveText {
-    0% {
-        transform: translateY(10rem) rotateY(-30deg);
-    }
-    100% {
-        transform: translateY(0) rotateY(0);
-        opacity: 1;
-    }
 }
 
 .text-banner h1 {
@@ -199,6 +183,7 @@ header {
     top: 0;
     right: -20rem;
     transition: all 1s;
+    z-index: 99;
 }
 
 .lateral-menu.show-menu {
@@ -256,4 +241,354 @@ header {
     background-color: #1371a0;
 }
 
+.section-projects {
+    background-color: rgb(240, 240, 240);
+    padding-bottom: 2.5rem;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top h1 {
+    font-family: 'Baloo Da 2', serif;
+    font-size: 3rem;
+    color: #373B44;
+    border-bottom: solid 3px #1371a0;
+    margin-bottom: 1.5rem;
+}
+
+.section-projects .projects {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.projects .card {
+    width: 20rem;
+    height: 25rem;
+    position: relative;
+}
+
+.card-img-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: .5rem;
+}
+
+.card-img-wrapper img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+    border-radius: .5rem;
+    transition: opacity .3s;
+}
+
+.card-info {
+    position: absolute;
+    bottom: 0;
+    padding: 2rem;
+    text-shadow: 0.3rem 0.2rem 0.3rem rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.card-info h2 {
+    font-family: 'Baloo Da 2', serif;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #eee;
+}
+
+.card-info h3 {
+    font-family: 'Lato', serif;
+    font-weight: bolder;
+    color: #1ea2e4;
+    margin-bottom: 1.5rem;
+}
+
+.card-info p {
+    font-family: 'Josefin Slab', serif;
+    color: #eee;
+    font-weight: 400;
+    width: 80%;
+    margin-bottom: 2rem;
+}
+
+.card-info button {
+    width: 8rem;
+    height: 2.5rem;
+    background: #373B44;
+    background: -webkit-linear-gradient(to left, #1371a0, #09374e);
+    background: linear-gradient(to left, #1371a0, #09374e);
+    border: 0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-family: 'Lato', serif;
+    font-size: 1rem;
+    color: #eee;
+    box-shadow: 0 .1rem .8rem rgba(0, 0, 0, 0.4);
+}
+
+.card:hover .card-info {
+    bottom: 1rem;
+    opacity: 1;
+    visibility: visible;
+}
+
+.card:hover .card-img-wrapper img {
+    opacity: 0.2;
+}
+
+.section-contact {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(51, 51, 51);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-wrapper {
+    width: 60%;
+    height: 40rem;
+    display: flex;
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.5);
+}
+
+.contact-left {
+    width: 35%;
+    background: 
+        linear-gradient(rgba(15, 15, 15, .6), rgba(22, 22, 22, .9)), 
+        url('../assets/images/contact.jpg');
+    background-size: cover;
+}
+
+.contact-right {
+    width: 65%;
+    background-color: rgb(240, 240, 240);
+    padding: 1rem 3rem 3rem 3rem;
+}
+
+.section-contact h1 {
+    font-family: 'Baloo Da 2', serif;
+    color: #373B44;
+    font-size: 3rem;
+    font-weight: lighter;
+    width: 100%;
+    text-align: center;
+}
+
+.section-contact form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.input-group {
+    position: relative;
+}
+
+.field {
+    background-color: transparent;
+    border: 0;
+    width: 30rem;
+    font-size: 1rem;
+    font-family: 'Josefin Slab', serif;
+    border-bottom: 1px dashed #373B44;
+    height: 3rem;
+    outline: 0;
+    margin: 2rem 0;
+    padding: 20px 8px 8px 8px;
+}
+
+textarea.field { padding: 20px 8px 8px 8px; resize: vertical; max-height: 5rem; }
+
+.field-label {
+    position: absolute;
+    left: 0;
+    top: 2rem;
+    font-family: 'Josefin Slab', serif;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+}
+
+.field:focus ~ label {
+    top: 0;
+    font-size: 1rem;
+}
+
+.field:focus {
+    border-bottom: 1px solid #373B44;
+}
+
+.btn {
+    background: #373B44;
+    background: -webkit-linear-gradient(to left, #1371a0, #09374e);
+    background: linear-gradient(to left, #1371a0, #09374e);
+    border: 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 .1rem .8rem rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    font-family: 'Lato', serif;
+    font-size: 1rem;
+    color: #eee;
+    width: 8rem;
+    height: 2.5rem;
+}
+
+.submit {
+    width: 100%;
+    height: 2rem;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+footer {
+    width: 100%;
+    height: 10rem;
+    background-color: rgb(29, 29, 29);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content p {
+    font-family: 'Josefin Slab', serif;
+    color: #eee;
+    font-size: 1.2rem;
+}
+
+.social-list a {
+    margin: 0 2rem;
+    color: #eee;
+    font-size: 1.3rem;
+}
+
+.social-list ul {
+    display: flex;
+}
+
+.section-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding-bottom: 2.5rem;
+}
+
+.about-content {
+    width: 60%;
+    height: 20rem;
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+.about-left {
+    width: 55%;
+    margin-right: 5%;
+}
+
+.about-left p {
+    font-family: 'Josefin Slab', serif;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+.about-right {
+    width: 40%;
+    background: url('../assets/images/company.jpg');
+    background-size: cover;
+    box-shadow: 0 .1rem .8rem rgba(0, 0, 0, 0.4);
+    border-radius: .5rem;
+}
+
+#link-top {
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+    width: 3rem;
+    height: 3rem;
+    background: #373B44;
+    background: -webkit-linear-gradient(to left, #1371a0, #09374e);
+    background: linear-gradient(to left, #1371a0, #09374e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: .3rem;
+    box-shadow:  0 0.1rem 0.6rem #00000009;
+}
+
 /* -Final Estilização Site- */
+
+@keyframes zoom {
+    0% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+@keyframes moveText {
+    0% {
+        transform: translateY(10rem) rotateY(-30deg);
+    }
+    100% {
+        transform: translateY(0) rotateY(0);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .projects .card {
+        margin-bottom: 2.5rem;
+    }
+
+    .about-content {
+        width: 100%;
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .about-left {
+        width: 100%;
+        text-align: center;
+        margin: 2rem 2%;
+    }
+
+    .about-right {
+        width: 100%;
+        height: 20rem;
+        margin: 0 2%;
+    }
+
+    .contact-left {
+        display: none;
+    }
+
+    .contact-right {
+        width: 100%;
+    }
+
+    .field {
+        width: 15rem;
+    }
+}
