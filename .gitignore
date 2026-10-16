@@ -1,2 +1,4 @@
 ### Deploy (interno, não publicar em repo público) ###
 devops/
+*.tar.gz
+.env
