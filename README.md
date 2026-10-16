@@ -1,62 +1,112 @@
-# 💻 WebDesign
+# 🎨 WebDesign Template
 
-<p align="center">This project is a website with planned design...</p>
+> A responsive landing page template built with plain HTML, CSS and JavaScript
 
-<br/>
+![Project Banner](./assets/images/bg.jpg)
 
-# 📓 Contents:
+## 📋 Table of Contents
 
-- About
-    - [Features](#Features)
-- Contents,
-- How to use
-    - [Prerequisites](#Prerequisites)
-    - [Running the project](#Running-the-project)
-- Tests,
-- Technologies,
-- Icons.
+-   [About the Project](#-about-the-project)
+-   [Features](#-features)
+-   [Technologies Used](#-technologies-used)
+-   [Prerequisites](#-prerequisites)
+-   [Installation and Setup](#-installation-and-setup)
+-   [Running with Docker](#-running-with-docker)
+-   [Project Structure](#-project-structure)
+-   [Tests](#-tests)
+-   [Contributing](#-contributing)
+-   [License](#-license)
 
-<br/>
+## 🎯 About the Project
 
-# About:
+**WebDesign Template** is a one-page landing page built by BortolettoTech to be used as a starting point for new sites. It has no framework and no build step — just HTML, CSS and vanilla JavaScript — so it can be dropped into any project and restyled quickly.
 
-### Features:
+### Why use this template?
 
-- [x] Create Title
-- [x] Create Project
-- [x] Create Description
-- [x] Performed Tests
+-   ✅ **No dependencies**: no build tools, no framework, no package manager required
+-   ✅ **Responsive**: adapts from desktop down to mobile
+-   ✅ **Ready-made sections**: hero banner, project showcase, about and contact
+-   ✅ **Easy to theme**: colors, fonts and spacing centralized in one stylesheet
+-   ✅ **Containerized**: ships with a Docker image for instant deployment
 
-<br/>
+## 🚀 Features
 
-# 📝 How to use:
+-   **Hero banner** with animated entrance and a call-to-action button
+-   **Sliding lateral menu** with a hamburger toggle for navigation and social links
+-   **Project showcase** with hover-reveal cards
+-   **About section** with a two-column layout
+-   **Contact form** with floating labels (front-end only, no backend wired up)
+-   **Back-to-top** shortcut and smooth scrolling between sections
 
-<br/>
+## 🛠 Technologies Used
 
-### Prerequisites:
+-   **HTML5** - page structure
+-   **CSS3** - styling, animations and responsive layout
+-   **JavaScript (vanilla)** - menu toggle and small interactions
+-   **Font Awesome** - icons
+-   **Google Fonts** - typography (Baloo Da 2, Josefin Slab, Lato)
+-   **Docker & Nginx** - containerized static hosting
 
-You need to have the following tools installed on your machine: [Git](https://git-scm.com) and [VSCode](https://code.visualstudio.com/)
+## 📋 Prerequisites
 
-<br/>
+To run the project locally, you need one of:
 
-### Running the project:
+-   A modern browser and a code editor, e.g. [VSCode](https://code.visualstudio.com/) ([Git](https://git-scm.com) to clone it)
+-   **Docker** ([Download](https://docs.docker.com/get-docker/)) to run it containerized
+
+## 🚀 Installation and Setup
+
+### 1. Clone the Repository
 
 ```bash
-# Clone this repository
-$ git clone <https://github.com/bortolettojoaog/web_design.git>
-
-# Access the project folder through terminal/cmd
-$ cd web_design
-
-# Open the project in visual studio code
-$ code .
-
-# Open the index.html file or use the `Live Server` extension
+git clone https://github.com/bortolettojoaog/web_design.git
+cd web_design
 ```
 
-<br/>
+### 2. Open the Project
 
-# ✔️ Tests:
+```bash
+# Open in VSCode
+code .
+
+# Then open index.html directly in a browser,
+# or serve it with the "Live Server" extension
+```
+
+## 🐳 Running with Docker
+
+The project ships with a `Dockerfile` that builds a small Nginx image to serve the static files.
+
+```bash
+# Build the image
+docker build -t web-design-template .
+
+# Run the container
+docker run -d -p 8080:80 --name web-design-template web-design-template
+```
+
+The site will be available at: `http://localhost:8080`
+
+## 📁 Project Structure
+
+```
+web_design/
+├── index.html              # Page markup
+├── css/
+│   └── style.css           # All styling, animations and media queries
+├── js/
+│   └── script.js           # Lateral menu toggle and small behaviors
+├── assets/
+│   ├── images/              # Banner and section images
+│   └── icons/               # Favicons and PWA icons
+├── nginx/
+│   └── default.conf         # Nginx config used by the Docker image
+├── Dockerfile               # Builds the Nginx image for deployment
+└── site.webmanifest         # PWA manifest
+```
+
+## ✔️ Tests
+
 <h1 align="center">
     <img alt="Test" title="Test" src="./github/tests1.jpg" />
     <img alt="Test" title="Test" src="./github/tests2.jpg" />
@@ -64,33 +114,24 @@ $ code .
     <img alt="Test" title="Test" src="./github/tests4.jpg" />
 </h1>
 
-<br/>
+## 🤝 Contributing
 
-# 🛠️ Technologies:
+Contributions are welcome! To contribute:
 
-The following tools were used in building the project:
+1. Fork the project
+2. Create a branch for your feature (`git checkout -b feature/new-feature`)
+3. Commit your changes (`git commit -m 'Add new feature'`)
+4. Push to the branch (`git push origin feature/new-feature`)
+5. Open a Pull Request
 
-- [JavaScript](https://www.javascript.com/)
-- [HTML](https://pt.wikipedia.org/wiki/HTML)
-- [CSS](https://pt.wikipedia.org/wiki/Cascading_Style_Sheets)
+## 📄 License
 
-<br/>
-
-# 📁 Icons:
-
-- :package: new functionality
-- :up: update
-- :bug: bug fix
-- :checkered_flag: release
-
-<br/>
+This project is under the MIT license. See the [LICENSE](LICENSE) file for more details.
 
 ---
 
-<p align="center">
-    Made with ❤️ by João Guilherme Bortoletto 👋
-</p>
-
-<p align="center">
-    <a href="https://www.linkedin.com/in/bortolettojoaog/">See my LinkedIn</a>
-</a>
+<div align="center">
+  <p>Developed with ❤️ by <strong>BortolettoTech</strong></p>
+  <p><a href="https://www.linkedin.com/in/bortolettojoaog/">See my LinkedIn</a></p>
+  <p>⭐ If this project was helpful, consider giving it a star!</p>
+</div>
