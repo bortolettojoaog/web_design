@@ -5,3 +5,9 @@ hamburguer.addEventListener('click', function() {
     document.querySelector('.hamburguer').classList.toggle("show-menu");
     document.querySelector('.hamburguer > span').classList.toggle("show-menu");
 });
+
+document.querySelector('#year').textContent = new Date().getFullYear();
+
+document.querySelector('.section-contact form').addEventListener('submit', function(event) {
+    event.preventDefault();
+});
