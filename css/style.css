@@ -43,6 +43,36 @@ header {
     position: relative;  
 }
 
+.template-badge {
+    position: fixed;
+    z-index: 100;
+    left: 2rem;
+    top: 2rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: white;
+    font-family: 'Lato', serif;
+    font-size: 0.85rem;
+    letter-spacing: .03rem;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    backdrop-filter: blur(4px);
+    transition: background-color .3s;
+}
+
+.template-badge:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media screen and (max-width: 600px) {
+    .template-badge {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.8rem;
+        left: 1rem;
+        top: 1rem;
+    }
+}
+
 .hamburguer {
     width: 2rem;
     height: 2rem;
