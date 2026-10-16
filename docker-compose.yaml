@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+    y3mw0d:
+        image: hub.bortolettotech.com/y3mw0d:latest
+        container_name: y3mw0d
+        restart: unless-stopped
+        ports:
+            - '80:80'
