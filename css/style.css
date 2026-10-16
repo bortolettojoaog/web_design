@@ -503,7 +503,8 @@ footer {
     font-size: 1.2rem;
 }
 
-.social-list a {
+.social-list a,
+.social-list li > i {
     margin: 0 2rem;
     color: #eee;
     font-size: 1.3rem;
